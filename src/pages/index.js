@@ -19,7 +19,7 @@ export default function Home() {
           <p>
             Aplicación web integral diseñada para revolucionar la forma en que los concesionarios de vehículos gestionan sus operaciones.
             <br />
-            ProveeMed permite a los usuarios explorar y acceder a un amplio catálogo de proveedores y sus respectivos productos médicos.
+            AutoDealer representa una evolución en la gestión de concesionarios de vehículos, ofreciendo una solución completa y adaptable a las necesidades específicas de cada negocio.
           </p>
           <div>
             <Link className={`${styles.header__button} ${styles['header__button--main']}`} href='/docs/introduccion'>📄 Documentación</Link>
