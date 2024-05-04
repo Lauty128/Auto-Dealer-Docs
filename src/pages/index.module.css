@@ -56,12 +56,14 @@ body{
 
 .header__githubButton{
   float: right;
+  display: block;
   padding: 5px 10px;
   font-weight: bold;
   background-color: var(--button-bg-color);
   color: var(--ifm-color-emphasis-100);
   border-radius: 10px;
   transform: scale(1);
+  margin-right: 10px;
   transition: transform .2s;
 }
 .header__githubButton:hover{
