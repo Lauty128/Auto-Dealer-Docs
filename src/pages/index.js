@@ -2,45 +2,42 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
-import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          Autodealer
-          {/* {siteConfig.title} */}
-        </Heading>
-        <p className="hero__subtitle">
-          Administra tu concesionario de la mejor forma
-          {/* {siteConfig.tagline} */}
-        </p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            📄 Documentación
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
+  
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
+      {/* <HomepageHeader /> */}
+      <header className={styles.header}>
+        <div className={styles.header__presentation}>
+          <h1>Centralizando esfuerzos, maximizando resultados.</h1>
+          <p>
+            Aplicación web integral diseñada para revolucionar la forma en que los concesionarios de vehículos gestionan sus operaciones.
+            <br />
+            ProveeMed permite a los usuarios explorar y acceder a un amplio catálogo de proveedores y sus respectivos productos médicos.
+          </p>
+          <div>
+            <Link className={`${styles.header__button} ${styles['header__button--main']}`} href='/docs/introduccion'>📄 Documentación</Link>
+            <Link className={styles.header__button} href='/instalacion'>💻 Instalar entorno de desarrollo</Link>
+          </div>
+        </div>
+        <div className={styles.header__github}>
+          <span>👉 Accede al codigo fuente</span>
+          <a href='https://github.com/Lauty128/Auto-Dealer-FrontEnd' className={styles.header__githubButton}>
+            ✨ FrontEnd
+          </a>
+          <a href='https://github.com/Lauty128/Auto-Dealer' className={styles.header__githubButton}>
+            📡 Backend
+          </a>
+        </div>
+      </header>
       <main>
-        <HomepageFeatures />
+        {/* <HomepageFeatures /> */}
       </main>
     </Layout>
   );
